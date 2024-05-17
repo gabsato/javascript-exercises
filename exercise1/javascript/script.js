@@ -1,3 +1,5 @@
+document.getElementById('textWelcome').style.display = 'none';
+
 function verifyEnter(event) {
     if (event.key === "Enter") {
         const nameUser = document.getElementById('inputUser').value;
@@ -11,6 +13,13 @@ function verifyEnter(event) {
         // Antes da animação, oculte o elemento
         setTimeout(() => {
             document.getElementById('inputUser').style.display = 'none';
-        }, 2000);
+        }, 500);
+
+        document.getElementById('textWelcome').classList.add('fadeIn');
+
+        setTimeout(() => {
+            document.getElementById('textWelcome').style.display = '';
+        }, 500);
+
     }
 }
